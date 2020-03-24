@@ -7,6 +7,7 @@ module.exports = {
     name: "prem",
     category: "dyno",
     description: "Tells you the shard and cluster that a Dyno Premium server is on.",
+    usage: '<server id>',
     run: async (client, message, args) => {
         if(!config.whitelisted.includes(message.author.id)) return; 
 
