@@ -2,11 +2,9 @@
 Eva is just a utility eval bot, that has some use for Dyno Bot Support via a few commands that only the staff team normally have access to. They are: 
 - ~~`!prod [serverid]` (shows the shard/cluster information for a guild)~~
 
-- `!cluster [cluster number]` (shows specific information on the cluster provided)
+- ~~`!cluster [cluster number]` (shows specific information on the cluster provided)~~
 
 - `!status` (lists the status of each dyno server)
-
-- `!server [server name]` (lists specific information for the provided Dyno server)
 
 - ~~`!prem [server id]` (shows the shard/cluster information for a premium guild)~~
 
