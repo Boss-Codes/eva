@@ -29,7 +29,6 @@ module.exports = {
 
             
 
-            console.log(cdata)
         }
         if(args[0] === 'prem') { 
             cdata = status.data.premium.statuses[cluster].result

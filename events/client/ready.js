@@ -6,7 +6,7 @@ console.log(`I am online as ${client.user.tag} in ${client.guilds.size} guilds a
 client.user.setPresence({
  status: 'online', 
  game: { 
-     name: 'boss code me', 
+     name: 'Dyno Status', 
      type: 'LISTENING'
  }
 });
