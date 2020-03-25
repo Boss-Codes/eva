@@ -17,7 +17,7 @@ module.exports = {
         .setColor('#00ff00')
         .addField('Question', question)
         .addField('Answer', replies[result])
-        .setFooter('Boss-Bot\'s 8ball')
+        .setFooter(`${client.user.username}' 8ball`)
         .setTimestamp()
 
         message.channel.send(ballembed); 

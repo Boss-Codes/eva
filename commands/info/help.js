@@ -35,10 +35,10 @@ function getAll(client, message) {
         .reduce((string, category) => string + "\n" + category);
  
         const size = client.commands.size
-    embed.setTitle('Eva | Help')
+    embed.setTitle(`${client.user.username} | Help`)
     embed.setDescription('Use `e!help [command]` to get information on a specfic command.\n\nPrefix: e!')
     embed.setThumbnail(client.user.avatarURL)
-    embed.setFooter(`Eva | ${size} total commands`, client.user.ava)
+    embed.setFooter(`${client.user.username} | ${size} total commands`, client.user.ava)
     return message.channel.send(embed.setDescription(info));
 }
 
