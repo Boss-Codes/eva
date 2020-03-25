@@ -7,7 +7,7 @@ module.exports = {
     name: "cluster",
     category: "dyno",
     description: "Gives all information on a specific cluster.",
-    usage: 'Use `!cluste prod [cluster id] for prod cluster information, `!cluser prem [cluser id]` for premium cluster information, and `!cluster alpha [cluster id] for alpha cluster information',
+    usage: '\n`!cluster prod [cluster id]` for prod cluster information\n\`!cluster prem [cluser id]` for premium cluster information\n\`!cluster alpha [cluster id]` for alpha cluster information',
     run: async (client, message, args) => {
         if(!config.whitelisted.includes(message.author.id)) return; 
 
