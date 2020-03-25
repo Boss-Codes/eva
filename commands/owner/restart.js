@@ -6,7 +6,7 @@ module.exports = {
     category: "owner",
     description: "Restarts the bot.",
     run: (client, message, args) => {
-        if (message.author.id !== '344954369285947392') return;A
+        if (message.author.id !== '344954369285947392') return;
 
         message.channel.send('Restarting now.').then(message => {
             console.log(`Restart started by ${message.author.tag} (${message.author.id}).`);
