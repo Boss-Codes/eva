@@ -111,7 +111,6 @@ module.exports = {
          }
             
 
-            console.log(cdata)
         }
         if(args[0] === 'prem') { 
             if(cdata.unavailableCount === 0) { 

@@ -1,5 +1,5 @@
 const { RichEmbed, WebhookClient } = require('discord.js');
-
+const moment = require('moment'); 
 
 module.exports = async (client, message) => { 
     
@@ -21,7 +21,13 @@ module.exports = async (client, message) => {
     if (!command) return; 
 
     if (command) { 
-        console.log(`Command: ${command.name}\nRan by: ${message.author.tag} (${message.author.id})\nIn guild: ${message.guild.name} (${message.guild.id})`)
+       let datem = moment.utc(Date.now()).format('MM/DD/YYYY')
+       let today = new Date()
+       let timevar = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+       let time = moment(timevar, "HH:mm:ss").format("hh:mm A");
+
+        console.log(`Command: ${command.name}\nRan by: ${message.author.tag} (${message.author.id})\nIn guild: ${message.guild.name} (${message.guild.id})\nIn channel: ${message.channel.name} (${message.channel.id})\nDate: ${datem}\nAt: ${time}`)
         command.run(client, message, args)
     }
 };
+

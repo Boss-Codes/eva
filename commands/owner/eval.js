@@ -8,10 +8,10 @@ module.exports = {
     const fs = require('fs');
     const wuper = 'Super duper wuper'
     const boss = 'Boss is a bad dev!'
-    const db = require('quick.db');
     const discord = require('discord.js');
     const Discord = require('discord.js');
     const hi = 'Hi im fred'
+    const bean = 'sally owner; wuper wednesday enthusiast'
     if(message.author.id !== '344954369285947392') return; 
     const content = message.content.split(' ').slice(1).join(' ');
             const result = new Promise((resolve, reject) => resolve(eval(content)));
