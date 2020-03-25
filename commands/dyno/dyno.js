@@ -4,7 +4,7 @@ const config = require('../../config.json')
 const axios = require('axios'); 
 
 module.exports = {
-    name: "prod",
+    name: "dyno",
     category: "dyno",
     description: "Tells you the shard and cluster that a Dyno server is on.",
     usage: '<server id>',
@@ -28,7 +28,7 @@ module.exports = {
 
         const embed = new RichEmbed()
         .setTitle('<:dyno:692216098820718602> Dyno Status')
-        .addField('Server ID', args.join(' '), true)
+        .addField('Server ID', args.join(' '))
         .addField('Server', `${cdata.server}`, true)
         .addField('Cluster', cluster, true)
         .addField('Shard', shard, true)
@@ -42,23 +42,39 @@ module.exports = {
            embed.setColor('#01E6CE')
            .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
        }
-      
-       let count = 0;
-       if (cdata.unavailableCount)(count +1) 
-
-       if (count = 0) { 
-           embed.setColor('#01E6CE')
-           embed.setThumbnail("https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png")
-       }
-       if (count > 0) { 
+       if(cdata.unavailableCount === 1) { 
         embed.setColor('#FF9B00')
-        embed.setThumbnail("https://cdn.discordapp.com/attachments/661656555447648286/692216732823322674/unknown.png")
+        .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
     }
-    if (count > 7) { 
+    if(cdata.unavailableCount === 2) { 
+        embed.setColor('#FF9B00')
+        .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
+    }
+    if(cdata.unavailableCount === 3) { 
+        embed.setColor('#FF9B00')
+        .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
+    }
+    if(cdata.unavailableCount === 4) { 
+        embed.setColor('#FF9B00')
+        .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
+    }
+    if(cdata.unavailableCount === 5) { 
+        embed.setColor('#FF9B00')
+        .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
+    }
+    if(cdata.unavailableCount === 6) { 
+        embed.setColor('#FF9B00')
+        .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
+    }
+    if(cdata.unavailableCount === 7) { 
+        embed.setColor('#FF9B00')
+        .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
+    }
+   
+    if (cdata.unavailableCount === 8) { 
         embed.setColor('#FF414B')
-        embed.setThumbnail("https://cdn.discordapp.com/attachments/661656555447648286/692216851308216340/unknown.png")
+        embed.setThumbnail("https://cdn.discordapp.com/attachments/679073762590589095/692225660802039889/unknown.png")
     }
-
        
 
        

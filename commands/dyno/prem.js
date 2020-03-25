@@ -26,15 +26,28 @@ module.exports = {
         const shard = Math.floor((args.join(' ')/ 4194304) % 20)
         const cdata = status.data.premium.statuses[cluster].result
 
+       
         const embed = new RichEmbed()
-        .setTitle('Dyno Cluster/Shard Information')
+        .setTitle('<:dyno:692216098820718602> Dyno Status')
         .addField('Server ID', args.join(' '))
-        .addField('Server', `${cdata.server}`)
-        .addField('Cluster', cluster)
-        .addField('Shard', shard)
-        .setColor('BLUE')
-        .setFooter(`Uptime: ${cdata.uptime}`)
-        .setTimestamp()
+        .addField('Server', `${cdata.server}`, true)
+        .addField('Cluster', cluster, true)
+        .addField('Shard', shard, true)
+        .addField('Connected Shards', `${cdata.connectedCount}/8`, true)
+        .addField('Unavailable Shards', `${cdata.unavailableCount}/8`, true)
+        .addField('Uptime', `${cdata.uptime}`, true)
+        .addField('Last Started', `${cdata.started}`, true)
+        .addField('Voice Connections', `${cdata.voiceConnections}`, true)
+
+       if(cdata.unavailableCount === 0) { 
+           embed.setColor('#01E6CE')
+           .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
+       }
+   
+    if (cdata.unavailableCount === 1) { 
+        embed.setColor('#FF414B')
+        embed.setThumbnail("https://cdn.discordapp.com/attachments/679073762590589095/692225660802039889/unknown.png")
+    }
 
         message.channel.send(embed)
     
