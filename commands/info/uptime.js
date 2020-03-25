@@ -3,6 +3,7 @@ const { RichEmbed } = require('discord.js');
 module.exports = { 
     name: 'uptime',
     category: 'info',
+    aliases: ['up'],
     descriptions: 'Shows the bot\'s uptime.',
     run: (client, message, args) => { 
 let rawuptime = client.uptime;
