@@ -61,7 +61,7 @@ function getCMD(client, message, input) {
         embed.setFooter(`Syntax: <> = required, [] = optional`);
     }
  
-    embed.setTitle(`${client.user.username} | Help`)
+    embed.setTitle(`${client.user.usernameBoAB} | Help`)
     embed.setThumbnail(client.user.avatarURL)
     embed.setColor('BLUE')
 
