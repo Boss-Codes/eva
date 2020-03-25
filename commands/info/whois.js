@@ -57,7 +57,7 @@ module.exports = {
         function staffFunction(member) { 
             var staffArray = []; 
             if (member.id == '344954369285947392') { 
-                staffArray.push('Developer, Certified JS Retard, Enthusiast')
+                staffArray.push('Developer, Certified JS Retard, Wuper Wednesday Enthusiast')
             }
             if (member.id == '489989456175300618') { 
                 staffArray.push('Potato, Wuper Wednesday Guy!') 
