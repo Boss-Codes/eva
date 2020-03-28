@@ -13,7 +13,7 @@ module.exports = {
 
         const getStatus = async () => { 
             try { 
-                return await axios.get('https://dyno.gg/api/status')
+                return await axios.get('https://staff.dyno.gg/api/status')
             } catch (error) { 
                 console.error(error)
             }
