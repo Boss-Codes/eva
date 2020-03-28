@@ -41,7 +41,6 @@ module.exports = {
            
 
         }
-        console.log(cdata)
 
         const embed = new RichEmbed()
         .addField('Shard Count', `${cdata.shardCount}`, true)
