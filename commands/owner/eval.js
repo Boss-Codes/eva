@@ -6,7 +6,7 @@ module.exports = {
     usage: "<code>", 
       run: (client, message, args) => { 
     const fs = require('fs');
-    const wuper = 'Super duper wuper'
+    const wuper = 'Super duper wuper | planes'
     const boss = 'Boss is a bad dev!'
     const discord = require('discord.js');
     const Discord = require('discord.js');
