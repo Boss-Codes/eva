@@ -46,18 +46,18 @@ module.exports = {
         .addField('Shard Count', `${cdata.shardCount}`, true)
         if(args[0] === 'prod') { 
             embed.addField('Connected Shards', `${cdata.connectedCount}/8`, true)
-            embed.addField('Disconnected Guilds', `${cdata.unavailableCount}/${cdata.guildCount}`, true)
+            .addField('Disconnected Guilds', `${cdata.unavailableCount}`, true)
 
 
         }
         if(args[0] === 'prem') { 
             embed.addField('Connected Shards', `${cdata.connectedCount}/1`, true)
-            embed.addField('Disconnected Guilds', `${cdata.unavailableCount}/${cdata.guildCount}`, true)
+            .addField('Disconnected Guilds', `${cdata.unavailableCount}`, true)
 
         }
         if(args[0] === 'alpha') { 
             embed.addField('Connected Shards', `${cdata.connectedCount}/1`, true)
-            embed.addField('Disconnected Guilds', `${cdata.unavailableCount}/${cdata.guildCount}`, true)
+            .addField('Disconnected Guilds', `${cdata.unavailableCount}`, true)
 
         }
         embed.addField('Connected Guilds', `${cdata.guildCount}`, true)

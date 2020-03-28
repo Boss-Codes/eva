@@ -33,7 +33,7 @@ module.exports = {
         .addField('Cluster', cluster, true)
         .addField('Shard', shard, true)
         .addField('Connected Shards', `${cdata.connectedCount}/8`, true)
-        .addField('Disconnected Guilds', `${cdata.unavailableCount}/${cdata.guildCount}`, true)
+        .addField('Disconnected Guilds', `${cdata.unavailableCount}`, true)
         .addField('Uptime', `${cdata.uptime}`, true)
         .addField('Last Started', `${cdata.started}`, true)
         .addField('Voice Connections', `${cdata.voiceConnections}`, true)
