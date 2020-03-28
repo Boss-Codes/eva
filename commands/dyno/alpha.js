@@ -6,7 +6,7 @@ const axios = require('axios');
 module.exports = {
     name: "alpha",
     category: "dyno",
-    aliases: ['a'],
+    aliases: ["a"],
     description: "Tells you the shard and cluster that a Dyno Alpha server is on.",
     usage: '<server id>',
     run: async (client, message, args) => {

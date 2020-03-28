@@ -6,7 +6,7 @@ const axios = require('axios');
 module.exports = {
     name: "cluster",
     category: "dyno",
-    aliases: ['c'],
+    aliases: ["c"],
     description: "Gives all information on a specific cluster.",
     usage: '\n`!cluster prod [cluster id]` for prod cluster information\n\`!cluster prem [cluser id]` for premium cluster information\n\`!cluster alpha [cluster id]` for alpha cluster information',
     run: async (client, message, args) => {
