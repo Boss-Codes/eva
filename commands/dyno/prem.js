@@ -29,7 +29,6 @@ module.exports = {
 
        
         const embed = new RichEmbed()
-        .setTitle('<:dyno:692216098820718602> Dyno Status')
         .addField('Server ID', args.join(' '))
         .addField('Server', `${cdata.server}`, true)
         .addField('Cluster', cluster, true)
