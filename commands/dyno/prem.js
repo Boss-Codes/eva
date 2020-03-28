@@ -6,6 +6,7 @@ const axios = require('axios');
 module.exports = {
     name: "prem",
     category: "dyno",
+    aliases: ['p'],
     description: "Tells you the shard and cluster that a Dyno Premium server is on.",
     usage: '<server id>',
     run: async (client, message, args) => {
@@ -39,15 +40,15 @@ module.exports = {
         .addField('Last Started', `${cdata.started}`, true)
         .addField('Voice Connections', `${cdata.voiceConnections}`, true)
 
-       if(cdata.unavailableCount === 0) { 
-           embed.setColor('#01E6CE')
-           .setThumbnail('https://cdn.discordapp.com/attachments/661656555447648286/692216659825655898/unknown.png')
-       }
-   
-    if (cdata.unavailableCount === 1) { 
-        embed.setColor('#FF414B')
-        embed.setThumbnail("https://cdn.discordapp.com/attachments/679073762590589095/692225660802039889/unknown.png")
-    }
+        if(cdata.unavailableCount === 0) { 
+            embed.setColor('#01E6CE')
+            embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/01E6CE/80x80.png')
+
+        }
+        if (cdata.unavailableCount > 100) { 
+            embed.setColor('#FF414B')
+            embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/FF414B/80x80.png')
+        }
 
         message.channel.send(embed)
     

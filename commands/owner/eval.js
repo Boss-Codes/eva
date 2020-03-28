@@ -10,6 +10,7 @@ module.exports = {
     const boss = 'Boss is a bad dev!'
     const discord = require('discord.js');
     const Discord = require('discord.js');
+    const axios = require('axios');
     const hi = 'Hi im fred'
     const bean = 'sally owner; wuper wednesday enthusiast'
     if(message.author.id !== '344954369285947392') return; 
