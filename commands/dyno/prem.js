@@ -42,12 +42,12 @@ module.exports = {
 
         if(cdata.unavailableCount === 0) { 
             embed.setColor('#01E6CE')
-            embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/01E6CE/80x80.png')
+            embed.setAuthor(`Premium Status`, 'https://color.dyno.gg/color/01E6CE/80x80.png')
 
         }
         if (cdata.unavailableCount > 100) { 
             embed.setColor('#FF414B')
-            embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/FF414B/80x80.png')
+            embed.setAuthor(`Premium Status`, 'https://color.dyno.gg/color/FF414B/80x80.png')
         }
 
         message.channel.send(embed)

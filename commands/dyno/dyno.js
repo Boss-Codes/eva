@@ -41,17 +41,17 @@ module.exports = {
 
         if(cdata.unavailableCount === 0) { 
             embed.setColor('#01E6CE')
-            embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/01E6CE/80x80.png')
+            embed.setAuthor(`Dyno Status`, 'https://color.dyno.gg/color/01E6CE/80x80.png')
         }
         if(cdata.unavailableCount > 100) { 
          embed.setColor('#FF9B00')
-         embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/FF9B00/80x80.png')
+         embed.setAuthor(`Dyno Status`, 'https://color.dyno.gg/color/FF9B00/80x80.png')
 
      }
     
      if (cdata.unavailableCount > 10000) { 
          embed.setColor('#FF414B')
-         embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/FF414B/80x80.png')
+         embed.setAuthor(`Dyno Status`, 'https://color.dyno.gg/color/FF414B/80x80.png')
 
      }
        
