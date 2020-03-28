@@ -79,7 +79,7 @@ module.exports = {
 
          }
         
-         if (cdata.unavailableCount > 10000) { 
+         if (cdata.unavailableCount > 2500) { 
 
              embed.setColor('#FF414B')
              embed.setAuthor(`${cdata.server}-${cdata.clusterId}`, 'https://color.dyno.gg/color/FF414B/80x80.png')

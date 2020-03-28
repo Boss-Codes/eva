@@ -48,7 +48,7 @@ module.exports = {
 
      }
     
-     if (cdata.unavailableCount > 10000) { 
+     if (cdata.unavailableCount > 2500) { 
          embed.setColor('#FF414B')
          embed.setAuthor(`Dyno Status`, 'https://color.dyno.gg/color/FF414B/80x80.png')
 
