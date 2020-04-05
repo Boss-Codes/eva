@@ -23,8 +23,8 @@ module.exports = {
         const status = await getStatus()
       
         if (!args.join(' ')) return message.channel.send('Provide a server ID!')
-        const cluster = Math.floor(((args.join(' ')/ 4194304) % 20)/1)
-        const shard = Math.floor((args.join(' ')/ 4194304) % 20)
+        const cluster = Math.floor(((args.join(' ')/ 4194304) % 32)/1)
+        const shard = Math.floor((args.join(' ')/ 4194304) % 32)
         const cdata = status.data.premium.statuses[cluster].result
 
        
